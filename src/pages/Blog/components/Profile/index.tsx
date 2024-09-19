@@ -1,7 +1,8 @@
 import { FooterInformationsProfile, HeaderInformationsProfile, ImageContent, InformationsSection, ProfileContainer } from "./styles";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faArrowUpRightFromSquare, faBuilding, faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import { faBuilding, faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import InputComponent from "../../../../components/Input";
 
 export default function Profile() {
     return (
@@ -12,10 +13,7 @@ export default function Profile() {
             <InformationsSection>
                 <HeaderInformationsProfile>
                     <h1>Rafael Brito</h1>
-                    <a rel="stylesheet" href="">
-                        <span>GITHUB</span>
-                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                    </a>
+                    <InputComponent text="GITHUB" />
                 </HeaderInformationsProfile>
                 <p>Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.</p>
                 <FooterInformationsProfile>

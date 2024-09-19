@@ -9,7 +9,6 @@ export const ProfileContainer = styled.header`
   margin: 0 auto;
   padding: 1.5rem;
   margin-top: -8rem;
-
   display: flex;
   gap: 1rem;
 `;
@@ -48,21 +47,6 @@ export const HeaderInformationsProfile = styled.header`
     margin-bottom: 0;
     font-size: 24px;
     font-weight: 700;
-  }
-
-  a {
-    text-decoration: none;
-    color: ${(props) => props.theme["blue"]};
-
-    span {
-      margin: 4px;
-      font-size: 14px;
-    }
-
-    &:hover {
-      border-bottom: 1px solid ${(props) => props.theme.blue};
-      transition: 0.2s border-bottom;
-    }
   }
 `;
 

@@ -10,6 +10,11 @@ export const PostContainer = styled.a`
   padding: 20px;
   text-decoration: none;
   background-color: ${(props) => props.theme["base-post"]};
+
+  &:hover {
+    outline: 2px solid ${(props) => props.theme["base-span"]};
+    transition: 0.2s outline;
+  }
 `;
 
 export const PostHeader = styled.header`

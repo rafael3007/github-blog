@@ -1,22 +1,23 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { PostContainer, PostHeader, PostSection } from "./styles";
-import { faArrowUpRightFromSquare, faCalendarDay, faChevronLeft, faComment } from "@fortawesome/free-solid-svg-icons";
+import { FooterInformationsProfile, PostContainer, PostHeader, PostSection } from "./styles";
+import {  faCalendarDay, faChevronLeft, faComment } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import Link from "../../components/Link";
 
 export default function Post() {
     return (
         <PostContainer>
             <PostHeader>
                 <nav>
-                    <div><FontAwesomeIcon icon={faChevronLeft} /><span>VOLTAR</span></div>
-                    <div><span>VER NO GITHUB</span><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></div>
+                    <a><FontAwesomeIcon icon={faChevronLeft} /><span>VOLTAR</span></a>
+                    <Link text="VER NO GITHUB"/>
                 </nav>
                 <h1>JavaScript data types and data structures</h1>
-                <footer>
-                <a href=""><FontAwesomeIcon icon={faGithub} /><span>Link profile</span></a>
-                    <div><FontAwesomeIcon icon={faCalendarDay} /><span>Há 1 dia</span></div>
-                    <div><FontAwesomeIcon icon={faComment} /><span>5 comentários</span></div>
-                </footer>
+                <FooterInformationsProfile>
+                    <a href=""><FontAwesomeIcon icon={faGithub} /><span>Link profile</span></a>
+                    <a href=""><FontAwesomeIcon icon={faCalendarDay} /><span>Há 1 dia</span></a>
+                    <a href=""><FontAwesomeIcon icon={faComment} /><span>5 comentários</span></a>
+                </FooterInformationsProfile>
             </PostHeader>
             <PostSection>
 
