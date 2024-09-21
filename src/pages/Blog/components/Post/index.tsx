@@ -1,6 +1,7 @@
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import { PostContainer, PostDecription, PostHeader } from "./styles";
+import { PostContainer, PostDescription, PostHeader } from "./styles";
+import Markdown from "react-markdown";
 
 interface PostProps {
     title: string;
@@ -19,9 +20,9 @@ export default function Post({ title, created_at, description, number }:PostProp
                     locale: ptBR
                 })}</span>
             </PostHeader>
-            <PostDecription>
-                <p>{ description }</p>
-            </PostDecription>
+            <PostDescription>
+                <p><Markdown>{ description }</Markdown></p>
+            </PostDescription>
       </PostContainer>
   )
 }

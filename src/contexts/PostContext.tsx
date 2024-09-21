@@ -11,7 +11,7 @@ interface PostContextType {
 }
 
 interface PostProviderProps {
-  children: ReactNode;
+    children: ReactNode;
 }
 
 export const PostContext = createContext<PostContextType>({} as PostContextType);

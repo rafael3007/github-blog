@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const PostContainer = styled(Link)`
   display: flex;
@@ -10,10 +10,10 @@ export const PostContainer = styled(Link)`
   gap: 1rem;
   padding: 20px;
   text-decoration: none;
-  background-color: ${(props) => props.theme["base-post"]};
+  background-color: ${(props) => props.theme['base-post']};
 
   &:hover {
-    outline: 2px solid ${(props) => props.theme["base-span"]};
+    outline: 2px solid ${(props) => props.theme['base-span']};
     transition: 0.2s outline;
   }
 `;
@@ -25,20 +25,20 @@ export const PostHeader = styled.header`
   justify-content: space-between;
 
   h1 {
-    color: ${(props) => props.theme["base-title"]};
+    color: ${(props) => props.theme['base-title']};
     font-size: 20px;
     width: 80%;
   }
 
   span {
-    color: ${(props) => props.theme["base-span"]};
+    color: ${(props) => props.theme['base-span']};
     font-size: 12px;
   }
 `;
 
-export const PostDecription = styled.article`
+export const PostDescription = styled.article`
   p {
-    color: ${(props) => props.theme["base-text"]};
-    font-size: 14px;
+    color: ${(props) => props.theme['base-text']};
+    font-size: 18px;
   }
 `;

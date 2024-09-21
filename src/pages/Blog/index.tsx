@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import Post from './components/Post';
 import Profile from './components/Profile';
-import SearchForm from './components/SearchForm';
 import { BlogContainer, PostsContainer } from './styles';
 import { PostContext } from '../../contexts/PostContext';
 import { useContextSelector } from 'use-context-selector';
 import { Loading } from '../../components/Loading';
+import { SearchForm } from './components/SearchForm';
 
 export default function Blog() {
   const posts = useContextSelector(PostContext, (context) => context.posts);
