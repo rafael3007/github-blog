@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const PostContainer = styled.main`
   width: 100%;
   max-width: 1120px;
-  margin: 4rem auto 0;
+  margin: 3rem auto 0;
   padding: 0 1.5rem;
 
   display: flex;
@@ -11,6 +11,21 @@ export const PostContainer = styled.main`
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+`;
+
+export const LinkComponent = styled.a`
+  text-decoration: none;
+  color: ${(props) => props.theme["blue"]};
+
+  span {
+    margin: 4px;
+    font-size: 14px;
+  }
+
+  &:hover {
+    border-bottom: 1px solid ${(props) => props.theme.blue};
+    transition: 0.2s border-bottom;
+  }
 `;
 
 export const PostHeader = styled.header`
@@ -48,12 +63,21 @@ export const PostHeader = styled.header`
 
     &:hover {
       border-bottom: 1px solid ${(props) => props.theme.blue};
+      margin: -1px;
       transition: 0.2s border-bottom;
     }
   }
 `;
 
-export const PostSection = styled.section``;
+export const PostSection = styled.section`
+  width: 75%;
+  padding: 10px;
+
+  p {
+    margin: 2rem;
+    color: ${(props) => props.theme["base-text"]};
+  }
+`;
 
 export const FooterInformationsProfile = styled.footer`
   display: flex;
@@ -67,6 +91,8 @@ export const FooterInformationsProfile = styled.footer`
 
     span {
       margin: 4px;
+      font-size: 18px;
+      padding-left: 2px;
       color: ${(props) => props.theme["base-span"]};
     }
   }

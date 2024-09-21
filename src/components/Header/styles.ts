@@ -6,9 +6,5 @@ export const HeaderContainer = styled.header`
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: linear-gradient(
-    to bottom,
-    ${(props) => props.theme["base-profile"]},
-    ${(props) => props.theme["base-background"]}
-  );
+  background: linear-gradient(to bottom, #00274c, #002746);
 `;

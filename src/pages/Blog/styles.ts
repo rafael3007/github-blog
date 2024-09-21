@@ -19,4 +19,5 @@ export const PostsContainer = styled.main`
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 `;

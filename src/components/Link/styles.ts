@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const LinkContainer = styled.a`
+export const LinkContainer = styled(Link)`
   text-decoration: none;
-  color: ${(props) => props.theme["blue"]};
+  color: ${(props) => props.theme['blue']};
 
   span {
     margin: 4px;

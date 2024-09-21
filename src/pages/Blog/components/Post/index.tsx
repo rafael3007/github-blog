@@ -1,15 +1,26 @@
+import { formatDistanceToNow } from "date-fns";
+import { ptBR } from "date-fns/locale";
 import { PostContainer, PostDecription, PostHeader } from "./styles";
 
-export default function Post() {
+interface PostProps {
+    title: string;
+    created_at: string;
+    description: string;
+    number: number;
+}
+
+export default function Post({ title, created_at, description, number }:PostProps) {
     return (
-        <PostContainer href="">
+        <PostContainer to={`/post/${number}`}>
             <PostHeader>
-                <h1>JavaScript data types and data structures</h1>
-                <span>Há 1 dia</span>
+                <h1>{title}</h1>
+                <span>{formatDistanceToNow(new Date(created_at), {
+                    addSuffix: true,
+                    locale: ptBR
+                })}</span>
             </PostHeader>
             <PostDecription>
-                <p>Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.
-Dynamic typing</p>
+                <p>{ description }</p>
             </PostDecription>
       </PostContainer>
   )

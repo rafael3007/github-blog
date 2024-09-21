@@ -11,6 +11,7 @@ export const ProfileContainer = styled.header`
   margin-top: -8rem;
   display: flex;
   gap: 1rem;
+  border-bottom: 2px solid black;
 `;
 
 export const ImageContent = styled.aside`

@@ -4,11 +4,12 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 interface InputComponentProps {
   text: string;
+  url?: string;
 }
 
-export default function InputComponent({ text }: InputComponentProps) {
+export default function InputComponent({ text, url }: InputComponentProps) {
     return ( 
-      <InputContainer href="">
+      <InputContainer href={url} >
         <span>{text}</span>
         <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
       </InputContainer>

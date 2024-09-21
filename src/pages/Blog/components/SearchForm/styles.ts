@@ -31,6 +31,7 @@ export const SearchFormInputContainer = styled.div`
   input {
     background: ${(props) => props.theme["base-input"]};
     border: solid 1px ${(props) => props.theme["base-border"]};
+    color: ${(props) => props.theme["base-text"]};
     padding: 0.875rem;
     width: 100%;
     border-radius: 6px;

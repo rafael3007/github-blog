@@ -1,9 +1,11 @@
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles/global";
 import { defaultTheme } from "./styles/themes/default";
-// import Blog from "./pages/Blog";
 import Header from "./components/Header";
-import Post from "./pages/Post";
+import { Router } from "./Router";
+import { BrowserRouter } from "react-router-dom";
+import ProfileProvider from "./contexts/ProfileContext";
+import PostProvider from "./contexts/PostContext";
 
 export function App() {
 
@@ -11,9 +13,15 @@ export function App() {
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
       <Header />
-      <Post />
+      <ProfileProvider>
+        <PostProvider>
+          <BrowserRouter>
+            <Router />
+          </BrowserRouter>
+        </PostProvider>
+      </ProfileProvider>
     </ThemeProvider>
-  )
+  );
 }
 
 
