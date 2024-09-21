@@ -8,7 +8,7 @@ import { api } from "../../api/axios";
 import InputComponent from "../../components/Input";
 import { PostInformations } from "../../@types/PostInformations";
 import { Loading } from "../../components/Loading";
-import Markdown from "react-markdown";
+import ReactMarkdown from "react-markdown";
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale";
 interface apiPostIssues {
@@ -52,7 +52,7 @@ export default function Post() {
                         </FooterInformationsProfile>
                     </PostHeader>
                     <PostSection>
-                        <p><Markdown>{ postInformations.body}</Markdown></p>
+                        <p><ReactMarkdown>{ postInformations.body}</ReactMarkdown></p>
                     </PostSection>
                 </>
             ) : (<Loading size={32} />)
